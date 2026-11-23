@@ -1,6 +1,5 @@
 """Ensemble Learning Dashboard: Colombo Tea Auction Prices.
 Run:  streamlit run app.py     (needs colombo_tea_auction.csv in the same folder)
-AI disclosure: this file was generated with Claude (Anthropic) and reviewed by the student.
 """
 import time, warnings
 warnings.filterwarnings("ignore")
@@ -153,7 +152,6 @@ def ts_hybrid():
 st.title("🍃 Colombo Tea Auction prices ")  # shown above every page
 st.caption("Bagging · Boosting · Stacking · RF vs XGBoost · RF+ANN · RF+ARIMA  |  Colombo Tea Auction prices (Sri Lanka)")
 fast = st.sidebar.toggle("Fast mode (fewer trees)", True)
-st.sidebar.info(f"✅ Real data: {CSV_PATH} ({len(df):,} rows)\n\nTime-based split: train before {pd.Timestamp(cutoff).date()}, test after.")
 pre, models, res, Xte, yte = train_all(fast)
 st.sidebar.markdown("<p style='letter-spacing:.15em;font-size:.75rem;font-weight:700;opacity:.6;margin:1.2rem 0 .2rem'>WORKSPACE</p>", unsafe_allow_html=True)
 page = st.sidebar.radio("Navigation", ["Overview", "Model Comparison", "Feature Analysis", "Prediction", "Hybrid Forecast"],
