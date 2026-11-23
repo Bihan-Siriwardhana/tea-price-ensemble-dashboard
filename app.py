@@ -150,7 +150,6 @@ def ts_hybrid():
 
 # ------------------------------------------------------------------ UI
 st.title("🍃 Colombo Tea Auction prices ")  # shown above every page
-st.caption("Bagging · Boosting · Stacking · RF vs XGBoost · RF+ANN · RF+ARIMA  |  Colombo Tea Auction prices (Sri Lanka)")
 fast = st.sidebar.toggle("Fast mode (fewer trees)", True)
 pre, models, res, Xte, yte = train_all(fast)
 st.sidebar.markdown("<p style='letter-spacing:.15em;font-size:.75rem;font-weight:700;opacity:.6;margin:1.2rem 0 .2rem'>WORKSPACE</p>", unsafe_allow_html=True)
